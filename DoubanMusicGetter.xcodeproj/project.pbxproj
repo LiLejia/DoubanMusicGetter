@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CC5D9FE1697484500B0EA6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5D9FD1697484500B0EA6B /* UIKit.framework */; };
+		5CC5DA001697484500B0EA6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5D9FF1697484500B0EA6B /* Foundation.framework */; };
+		5CC5DA021697484500B0EA6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA011697484500B0EA6B /* CoreGraphics.framework */; };
+		5CC5DA081697484500B0EA6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DA061697484500B0EA6B /* InfoPlist.strings */; };
+		5CC5DA0A1697484600B0EA6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA091697484500B0EA6B /* main.m */; };
+		5CC5DA0E1697484600B0EA6B /* HLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA0D1697484600B0EA6B /* HLAppDelegate.m */; };
+		5CC5DA101697484600B0EA6B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DA0F1697484600B0EA6B /* Default.png */; };
+		5CC5DA121697484600B0EA6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DA111697484600B0EA6B /* Default@2x.png */; };
+		5CC5DA141697484600B0EA6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DA131697484600B0EA6B /* Default-568h@2x.png */; };
+		5CC5DA301697487700B0EA6B /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA1D1697487700B0EA6B /* ASIAuthenticationDialog.m */; };
+		5CC5DA311697487700B0EA6B /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA201697487700B0EA6B /* ASIDataCompressor.m */; };
+		5CC5DA321697487700B0EA6B /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA221697487700B0EA6B /* ASIDataDecompressor.m */; };
+		5CC5DA331697487700B0EA6B /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA241697487700B0EA6B /* ASIDownloadCache.m */; };
+		5CC5DA341697487700B0EA6B /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA261697487700B0EA6B /* ASIFormDataRequest.m */; };
+		5CC5DA351697487700B0EA6B /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA281697487700B0EA6B /* ASIHTTPRequest.m */; };
+		5CC5DA361697487700B0EA6B /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA2C1697487700B0EA6B /* ASIInputStream.m */; };
+		5CC5DA371697487700B0EA6B /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA2E1697487700B0EA6B /* ASINetworkQueue.m */; };
+		5CC5DA461697488D00B0EA6B /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA3B1697488D00B0EA6B /* NSObject+SBJSON.m */; };
+		5CC5DA471697488D00B0EA6B /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA3D1697488D00B0EA6B /* NSString+SBJSON.m */; };
+		5CC5DA481697488D00B0EA6B /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA3F1697488D00B0EA6B /* SBJSON.m */; };
+		5CC5DA491697488D00B0EA6B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA411697488D00B0EA6B /* SBJsonBase.m */; };
+		5CC5DA4A1697488D00B0EA6B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA431697488D00B0EA6B /* SBJsonParser.m */; };
+		5CC5DA4B1697488D00B0EA6B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA451697488D00B0EA6B /* SBJsonWriter.m */; };
+		5CC5DA4D1697494500B0EA6B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA4C1697494500B0EA6B /* MobileCoreServices.framework */; };
+		5CC5DA4F1697495100B0EA6B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA4E1697495100B0EA6B /* SystemConfiguration.framework */; };
+		5CC5DA511697495500B0EA6B /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA501697495500B0EA6B /* libz.1.2.5.dylib */; };
+		5CC5DA541697497100B0EA6B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA531697497100B0EA6B /* Reachability.m */; };
+		5CC5DA561697498000B0EA6B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA551697498000B0EA6B /* CFNetwork.framework */; };
+		5CC5DA59169749CB00B0EA6B /* HLDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA58169749CB00B0EA6B /* HLDownloadViewController.m */; };
+		5CC5DA5C16974BA100B0EA6B /* HLMusicDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA5B16974BA100B0EA6B /* HLMusicDownloader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CC5D9F91697484500B0EA6B /* DoubanMusicGetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanMusicGetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC5D9FD1697484500B0EA6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5CC5D9FF1697484500B0EA6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5CC5DA011697484500B0EA6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5CC5DA051697484500B0EA6B /* DoubanMusicGetter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubanMusicGetter-Info.plist"; sourceTree = "<group>"; };
+		5CC5DA071697484500B0EA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5CC5DA091697484500B0EA6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CC5DA0B1697484600B0EA6B /* DoubanMusicGetter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoubanMusicGetter-Prefix.pch"; sourceTree = "<group>"; };
+		5CC5DA0C1697484600B0EA6B /* HLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
+		5CC5DA0D1697484600B0EA6B /* HLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; };
+		5CC5DA0F1697484600B0EA6B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5CC5DA111697484600B0EA6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5CC5DA131697484600B0EA6B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5CC5DA1C1697487700B0EA6B /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		5CC5DA1D1697487700B0EA6B /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		5CC5DA1E1697487700B0EA6B /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		5CC5DA1F1697487700B0EA6B /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		5CC5DA201697487700B0EA6B /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		5CC5DA211697487700B0EA6B /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		5CC5DA221697487700B0EA6B /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		5CC5DA231697487700B0EA6B /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		5CC5DA241697487700B0EA6B /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		5CC5DA251697487700B0EA6B /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		5CC5DA261697487700B0EA6B /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		5CC5DA271697487700B0EA6B /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		5CC5DA281697487700B0EA6B /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		5CC5DA291697487700B0EA6B /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		5CC5DA2A1697487700B0EA6B /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		5CC5DA2B1697487700B0EA6B /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		5CC5DA2C1697487700B0EA6B /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		5CC5DA2D1697487700B0EA6B /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		5CC5DA2E1697487700B0EA6B /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		5CC5DA2F1697487700B0EA6B /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		5CC5DA391697488D00B0EA6B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		5CC5DA3A1697488D00B0EA6B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		5CC5DA3B1697488D00B0EA6B /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		5CC5DA3C1697488D00B0EA6B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		5CC5DA3D1697488D00B0EA6B /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		5CC5DA3E1697488D00B0EA6B /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		5CC5DA3F1697488D00B0EA6B /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		5CC5DA401697488D00B0EA6B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		5CC5DA411697488D00B0EA6B /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		5CC5DA421697488D00B0EA6B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		5CC5DA431697488D00B0EA6B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		5CC5DA441697488D00B0EA6B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		5CC5DA451697488D00B0EA6B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		5CC5DA4C1697494500B0EA6B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5CC5DA4E1697495100B0EA6B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5CC5DA501697495500B0EA6B /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		5CC5DA521697497100B0EA6B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5CC5DA531697497100B0EA6B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5CC5DA551697498000B0EA6B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5CC5DA57169749CB00B0EA6B /* HLDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDownloadViewController.h; sourceTree = "<group>"; };
+		5CC5DA58169749CB00B0EA6B /* HLDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDownloadViewController.m; sourceTree = "<group>"; };
+		5CC5DA5A16974BA100B0EA6B /* HLMusicDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMusicDownloader.h; sourceTree = "<group>"; };
+		5CC5DA5B16974BA100B0EA6B /* HLMusicDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMusicDownloader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CC5D9F61697484500B0EA6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC5DA561697498000B0EA6B /* CFNetwork.framework in Frameworks */,
+				5CC5DA511697495500B0EA6B /* libz.1.2.5.dylib in Frameworks */,
+				5CC5DA4F1697495100B0EA6B /* SystemConfiguration.framework in Frameworks */,
+				5CC5DA4D1697494500B0EA6B /* MobileCoreServices.framework in Frameworks */,
+				5CC5D9FE1697484500B0EA6B /* UIKit.framework in Frameworks */,
+				5CC5DA001697484500B0EA6B /* Foundation.framework in Frameworks */,
+				5CC5DA021697484500B0EA6B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CC5D9EE1697484500B0EA6B = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA1A1697484C00B0EA6B /* Libraries */,
+				5CC5DA031697484500B0EA6B /* DoubanMusicGetter */,
+				5CC5D9FC1697484500B0EA6B /* Frameworks */,
+				5CC5D9FA1697484500B0EA6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CC5D9FA1697484500B0EA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5D9F91697484500B0EA6B /* DoubanMusicGetter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CC5D9FC1697484500B0EA6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA551697498000B0EA6B /* CFNetwork.framework */,
+				5CC5DA501697495500B0EA6B /* libz.1.2.5.dylib */,
+				5CC5DA4E1697495100B0EA6B /* SystemConfiguration.framework */,
+				5CC5DA4C1697494500B0EA6B /* MobileCoreServices.framework */,
+				5CC5D9FD1697484500B0EA6B /* UIKit.framework */,
+				5CC5D9FF1697484500B0EA6B /* Foundation.framework */,
+				5CC5DA011697484500B0EA6B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CC5DA031697484500B0EA6B /* DoubanMusicGetter */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA0C1697484600B0EA6B /* HLAppDelegate.h */,
+				5CC5DA0D1697484600B0EA6B /* HLAppDelegate.m */,
+				5CC5DA57169749CB00B0EA6B /* HLDownloadViewController.h */,
+				5CC5DA58169749CB00B0EA6B /* HLDownloadViewController.m */,
+				5CC5DA5A16974BA100B0EA6B /* HLMusicDownloader.h */,
+				5CC5DA5B16974BA100B0EA6B /* HLMusicDownloader.m */,
+				5CC5DA041697484500B0EA6B /* Supporting Files */,
+			);
+			path = DoubanMusicGetter;
+			sourceTree = "<group>";
+		};
+		5CC5DA041697484500B0EA6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA051697484500B0EA6B /* DoubanMusicGetter-Info.plist */,
+				5CC5DA061697484500B0EA6B /* InfoPlist.strings */,
+				5CC5DA091697484500B0EA6B /* main.m */,
+				5CC5DA0B1697484600B0EA6B /* DoubanMusicGetter-Prefix.pch */,
+				5CC5DA0F1697484600B0EA6B /* Default.png */,
+				5CC5DA111697484600B0EA6B /* Default@2x.png */,
+				5CC5DA131697484600B0EA6B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CC5DA1A1697484C00B0EA6B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA381697488000B0EA6B /* JSON */,
+				5CC5DA1B1697485600B0EA6B /* ASIHttprequest */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		5CC5DA1B1697485600B0EA6B /* ASIHttprequest */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA521697497100B0EA6B /* Reachability.h */,
+				5CC5DA531697497100B0EA6B /* Reachability.m */,
+				5CC5DA1C1697487700B0EA6B /* ASIAuthenticationDialog.h */,
+				5CC5DA1D1697487700B0EA6B /* ASIAuthenticationDialog.m */,
+				5CC5DA1E1697487700B0EA6B /* ASICacheDelegate.h */,
+				5CC5DA1F1697487700B0EA6B /* ASIDataCompressor.h */,
+				5CC5DA201697487700B0EA6B /* ASIDataCompressor.m */,
+				5CC5DA211697487700B0EA6B /* ASIDataDecompressor.h */,
+				5CC5DA221697487700B0EA6B /* ASIDataDecompressor.m */,
+				5CC5DA231697487700B0EA6B /* ASIDownloadCache.h */,
+				5CC5DA241697487700B0EA6B /* ASIDownloadCache.m */,
+				5CC5DA251697487700B0EA6B /* ASIFormDataRequest.h */,
+				5CC5DA261697487700B0EA6B /* ASIFormDataRequest.m */,
+				5CC5DA271697487700B0EA6B /* ASIHTTPRequest.h */,
+				5CC5DA281697487700B0EA6B /* ASIHTTPRequest.m */,
+				5CC5DA291697487700B0EA6B /* ASIHTTPRequestConfig.h */,
+				5CC5DA2A1697487700B0EA6B /* ASIHTTPRequestDelegate.h */,
+				5CC5DA2B1697487700B0EA6B /* ASIInputStream.h */,
+				5CC5DA2C1697487700B0EA6B /* ASIInputStream.m */,
+				5CC5DA2D1697487700B0EA6B /* ASINetworkQueue.h */,
+				5CC5DA2E1697487700B0EA6B /* ASINetworkQueue.m */,
+				5CC5DA2F1697487700B0EA6B /* ASIProgressDelegate.h */,
+			);
+			name = ASIHttprequest;
+			sourceTree = "<group>";
+		};
+		5CC5DA381697488000B0EA6B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DA391697488D00B0EA6B /* JSON.h */,
+				5CC5DA3A1697488D00B0EA6B /* NSObject+SBJSON.h */,
+				5CC5DA3B1697488D00B0EA6B /* NSObject+SBJSON.m */,
+				5CC5DA3C1697488D00B0EA6B /* NSString+SBJSON.h */,
+				5CC5DA3D1697488D00B0EA6B /* NSString+SBJSON.m */,
+				5CC5DA3E1697488D00B0EA6B /* SBJSON.h */,
+				5CC5DA3F1697488D00B0EA6B /* SBJSON.m */,
+				5CC5DA401697488D00B0EA6B /* SBJsonBase.h */,
+				5CC5DA411697488D00B0EA6B /* SBJsonBase.m */,
+				5CC5DA421697488D00B0EA6B /* SBJsonParser.h */,
+				5CC5DA431697488D00B0EA6B /* SBJsonParser.m */,
+				5CC5DA441697488D00B0EA6B /* SBJsonWriter.h */,
+				5CC5DA451697488D00B0EA6B /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CC5D9F81697484500B0EA6B /* DoubanMusicGetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC5DA171697484600B0EA6B /* Build configuration list for PBXNativeTarget "DoubanMusicGetter" */;
+			buildPhases = (
+				5CC5D9F51697484500B0EA6B /* Sources */,
+				5CC5D9F61697484500B0EA6B /* Frameworks */,
+				5CC5D9F71697484500B0EA6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubanMusicGetter;
+			productName = DoubanMusicGetter;
+			productReference = 5CC5D9F91697484500B0EA6B /* DoubanMusicGetter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CC5D9F01697484500B0EA6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HL;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Henry Lee";
+			};
+			buildConfigurationList = 5CC5D9F31697484500B0EA6B /* Build configuration list for PBXProject "DoubanMusicGetter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5CC5D9EE1697484500B0EA6B;
+			productRefGroup = 5CC5D9FA1697484500B0EA6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CC5D9F81697484500B0EA6B /* DoubanMusicGetter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CC5D9F71697484500B0EA6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC5DA081697484500B0EA6B /* InfoPlist.strings in Resources */,
+				5CC5DA101697484600B0EA6B /* Default.png in Resources */,
+				5CC5DA121697484600B0EA6B /* Default@2x.png in Resources */,
+				5CC5DA141697484600B0EA6B /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CC5D9F51697484500B0EA6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC5DA0A1697484600B0EA6B /* main.m in Sources */,
+				5CC5DA0E1697484600B0EA6B /* HLAppDelegate.m in Sources */,
+				5CC5DA301697487700B0EA6B /* ASIAuthenticationDialog.m in Sources */,
+				5CC5DA311697487700B0EA6B /* ASIDataCompressor.m in Sources */,
+				5CC5DA321697487700B0EA6B /* ASIDataDecompressor.m in Sources */,
+				5CC5DA331697487700B0EA6B /* ASIDownloadCache.m in Sources */,
+				5CC5DA341697487700B0EA6B /* ASIFormDataRequest.m in Sources */,
+				5CC5DA351697487700B0EA6B /* ASIHTTPRequest.m in Sources */,
+				5CC5DA361697487700B0EA6B /* ASIInputStream.m in Sources */,
+				5CC5DA371697487700B0EA6B /* ASINetworkQueue.m in Sources */,
+				5CC5DA461697488D00B0EA6B /* NSObject+SBJSON.m in Sources */,
+				5CC5DA471697488D00B0EA6B /* NSString+SBJSON.m in Sources */,
+				5CC5DA481697488D00B0EA6B /* SBJSON.m in Sources */,
+				5CC5DA491697488D00B0EA6B /* SBJsonBase.m in Sources */,
+				5CC5DA4A1697488D00B0EA6B /* SBJsonParser.m in Sources */,
+				5CC5DA4B1697488D00B0EA6B /* SBJsonWriter.m in Sources */,
+				5CC5DA541697497100B0EA6B /* Reachability.m in Sources */,
+				5CC5DA59169749CB00B0EA6B /* HLDownloadViewController.m in Sources */,
+				5CC5DA5C16974BA100B0EA6B /* HLMusicDownloader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5CC5DA061697484500B0EA6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CC5DA071697484500B0EA6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CC5DA151697484600B0EA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5CC5DA161697484600B0EA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CC5DA181697484600B0EA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubanMusicGetter/DoubanMusicGetter-Prefix.pch";
+				INFOPLIST_FILE = "DoubanMusicGetter/DoubanMusicGetter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5CC5DA191697484600B0EA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubanMusicGetter/DoubanMusicGetter-Prefix.pch";
+				INFOPLIST_FILE = "DoubanMusicGetter/DoubanMusicGetter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CC5D9F31697484500B0EA6B /* Build configuration list for PBXProject "DoubanMusicGetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC5DA151697484600B0EA6B /* Debug */,
+				5CC5DA161697484600B0EA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC5DA171697484600B0EA6B /* Build configuration list for PBXNativeTarget "DoubanMusicGetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC5DA181697484600B0EA6B /* Debug */,
+				5CC5DA191697484600B0EA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CC5D9F01697484500B0EA6B /* Project object */;
+}
