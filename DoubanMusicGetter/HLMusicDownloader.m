@@ -10,6 +10,10 @@
 
 
 #define INFO_REQUEST 1000001
+#define MP3_REQUEST 1000002
+#define COVER_REQUEST 1000003
+
+#define CONTENT_LENGTH @"Content-Length"
 
 @implementation HLMusicDownloader
 @synthesize delegate;
@@ -40,10 +44,37 @@
         requestQueue.showAccurateProgress = YES;
         self.delegate = aDelegate;
         [self start];
-        downloadingCount = 0;
+        
+        downloadedMusicInfo = [[NSMutableArray alloc]init];
+        
+        songIds = [[NSMutableArray alloc]init];
+        
+        saveMusicFile = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingFormat:@"/mylovingsong.plist"] retain];
+        
+        NSLog(@"saveMusicFile = %@",saveMusicFile);
+        
+        saveImageDir = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]  stringByAppendingFormat:@"/image/"] retain];
+        
+        saveMp3Dir = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]  stringByAppendingFormat:@"/music/"] retain];
+        
+        [[NSFileManager defaultManager]createDirectoryAtPath:saveImageDir withIntermediateDirectories:YES attributes:nil error:NULL];
+        
+        [[NSFileManager defaultManager]createDirectoryAtPath:saveMp3Dir withIntermediateDirectories:YES attributes:nil error:NULL];
+        
+        failedCount = 0;
+        
+        lastCount = 0;
         
     }
     return self;
+}
+
+- (void)dealloc{
+    self.delegate = nil;
+    [downloadedMusicInfo release];
+    [requestQueue release];
+    [songIds release];
+    [super dealloc];
 }
 
 
@@ -68,6 +99,14 @@
     [requestQueue cancelAllOperations];
 }
 
+- (BOOL)hasSong:(NSString *)sid{
+    for(NSString *addedSid in songIds){
+        if([addedSid isEqualToString:sid])
+            return YES;
+    }
+    return NO;
+}
+
 
 - (void)requestFailed:(ASIHTTPRequest *)request{
     
@@ -82,14 +121,82 @@
     
 }
 
+- (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders{
+    
+    [request.userInfo setValue:[responseHeaders objectForKey:CONTENT_LENGTH] forKey:CONTENT_LENGTH];
+}
+
+- (void)request:(ASIHTTPRequest *)request incrementDownloadSizeBy:(long long)newLength{
+//    NSLog(@"increment length = %lld",newLength);
+    
+    if(delegate && [delegate respondsToSelector:@selector(downLoadingMusic:withLenthAdd:)])
+    {
+        [delegate downLoadingMusic:request withLenthAdd:newLength];
+    }
+}
+
+
 - (void)requestFinished:(ASIHTTPRequest *)request{
     
     if(request.tag == INFO_REQUEST){
         
+        NSDictionary *result = [request.responseString JSONValue];
         
+        NSArray *array = [result objectForKey:@"song"];
         
+        [downloadedMusicInfo addObjectsFromArray:array];
+        
+        //{"picture":"http:\/\/img3.douban.com\/mpic\/s3845165.jpg","albumtitle":"Come Away with Me","company":"Blue Note","rating_avg":4.42071,"public_time":"2002","ssid":"ccb1","album":"\/subject\/1394747\/","like":1,"artist":"Norah Jones","url":"http:\/\/mr3.douban.com\/201301051305\/aa78f34cb12732e98fb20a067012f1cd\/view\/song\/small\/p1027778.mp3","title":"Don't Know Why","subtype":"","length":186,"sid":"1027778","aid":"1394747"}
+        
+        for(NSDictionary *song in array)
+        {
+            NSString *sid = [song objectForKey:@"sid"];
+            
+            //如果已经包含这个歌曲
+            if([self hasSong:sid]){
+                continue;
+            }
+            
+            [downloadedMusicInfo addObject:song];
+            
+            [songIds addObject:sid];
+            
+            [self downloadMp3:song];
+            
+        }
+        
+        //527是我的歌曲
+        if([songIds count]<527){
+            
+            [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(getDownloadInfo) userInfo:nil repeats:NO];
+        }
+        
+        [songIds writeToFile:saveMusicFile atomically:YES];
+        
+    }else if(request.tag == MP3_REQUEST){
+        
+        NSDictionary *musicInfo = [request userInfo];
+        
+        NSLog(@"%@ - %@ downloaded finished. Total number is %d",[musicInfo objectForKey:@"artist"],[musicInfo objectForKey:@"title"],[songIds count]);
+        
+        NSData *downloadingData = [request responseData];
+        
+        NSString *mp3Name = [[musicInfo objectForKey:@"sid"]stringByAppendingPathExtension:@"mp3"];
+        
+        NSString *fileName = [saveMp3Dir stringByAppendingPathComponent:mp3Name];
+        
+        [downloadingData writeToFile:fileName atomically:YES];
+        
+    }else if(request.tag == COVER_REQUEST){
+        
+        NSDictionary *musicInfo = [request userInfo];
+        
+        NSData *downloadingData = [request responseData];
+        
+        NSString *imageName = [[[musicInfo objectForKey:@"picture"] lastPathComponent]stringByAppendingPathExtension:@"jpg"];
+        
+        [downloadingData writeToFile:[saveImageDir stringByAppendingPathComponent:imageName] atomically:YES];
     }
-    
 }
 
 - (void)getDownloadInfo{
@@ -98,21 +205,37 @@
     
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:requestPath]];
     
+    request.delegate = self;
+    
+    request.downloadProgressDelegate = self;
+    
     request.tag = INFO_REQUEST;
     
     [requestQueue addOperation:request];
 
 }
 
-- (void)downloadMp3:(NSString *)mp3Path{
+- (void)downloadMp3:(NSDictionary *)musicInfo{
     
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:mp3Path]];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:[musicInfo objectForKey:@"url" ]]];
     
-    request.tag = downloadingCount++;
+    request.tag = MP3_REQUEST;
+    
+    request.userInfo = musicInfo;
     
     [requestQueue addOperation:request];
     
+    ASIHTTPRequest *imageRequest = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:[musicInfo objectForKey:@"picture" ]]];
+    
+    imageRequest.tag = COVER_REQUEST;
+    
+    imageRequest.userInfo = musicInfo;
+    
+    [requestQueue addOperation:imageRequest];
+    
 }
+
+
 
 
 

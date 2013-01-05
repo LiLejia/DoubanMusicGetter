@@ -9,24 +9,43 @@
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
 #import "ASINetworkQueue.h"
+#import "JSON.h"
 
 
 @protocol HLMusicDownloaderDelegate <NSObject>
 
+@optional
+
 - (void)musicDownloadFinished:(NSString *)musicId;
+
+- (void)downLoadingMusic:(ASIHTTPRequest *)request withLenthAdd:(long long) length;
 
 @end
 
-@interface HLMusicDownloader : NSObject{
+@interface HLMusicDownloader : NSObject<ASIHTTPRequestDelegate,ASIProgressDelegate>{
     
     ASINetworkQueue *requestQueue;
     
     id <HLMusicDownloaderDelegate> delegate;
     
-    int downloadingCount;
+    NSMutableArray *downloadedMusicInfo;
+    
+    NSMutableArray *songIds;
+    
+    
+    NSString *saveMusicFile ;
+    NSString *saveImageDir ;
+    NSString *saveMp3Dir ;
+    
+    int failedCount;
+    int lastCount;
     
 }
 
 @property (nonatomic,retain) id <HLMusicDownloaderDelegate> delegate;
+
+- (void)getDownloadInfo;
+
+- (id)initWithDelegate:(id <HLMusicDownloaderDelegate>) aDelegate;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HLMusicDownloader.h"
 
-@interface HLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HLAppDelegate : UIResponder <UIApplicationDelegate,HLMusicDownloaderDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
