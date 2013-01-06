@@ -37,6 +37,12 @@
 		5CC5DA561697498000B0EA6B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DA551697498000B0EA6B /* CFNetwork.framework */; };
 		5CC5DA59169749CB00B0EA6B /* HLDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA58169749CB00B0EA6B /* HLDownloadViewController.m */; };
 		5CC5DA5C16974BA100B0EA6B /* HLMusicDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DA5B16974BA100B0EA6B /* HLMusicDownloader.m */; };
+		BAD51C9A16998A6C0009667B /* ID3Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD51C9516998A6C0009667B /* ID3Frame.m */; };
+		BAD51C9B16998A6C0009667B /* ID3FrameText.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD51C9716998A6C0009667B /* ID3FrameText.m */; };
+		BAD51C9C16998A6C0009667B /* ID3Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD51C9916998A6C0009667B /* ID3Parser.m */; };
+		BAD51CA016998AA90009667B /* 10952.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAD51C9E16998AA90009667B /* 10952.mp3 */; };
+		BAD51CA116998AA90009667B /* Paradise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAD51C9F16998AA90009667B /* Paradise.mp3 */; };
+		BAD51CA416998AE70009667B /* HLID3Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD51CA316998AE70009667B /* HLID3Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +102,17 @@
 		5CC5DA58169749CB00B0EA6B /* HLDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDownloadViewController.m; sourceTree = "<group>"; };
 		5CC5DA5A16974BA100B0EA6B /* HLMusicDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMusicDownloader.h; sourceTree = "<group>"; };
 		5CC5DA5B16974BA100B0EA6B /* HLMusicDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMusicDownloader.m; sourceTree = "<group>"; };
+		BAD51C9316998A6C0009667B /* frameIDALL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frameIDALL.h; sourceTree = "<group>"; };
+		BAD51C9416998A6C0009667B /* ID3Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3Frame.h; sourceTree = "<group>"; };
+		BAD51C9516998A6C0009667B /* ID3Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ID3Frame.m; sourceTree = "<group>"; };
+		BAD51C9616998A6C0009667B /* ID3FrameText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3FrameText.h; sourceTree = "<group>"; };
+		BAD51C9716998A6C0009667B /* ID3FrameText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ID3FrameText.m; sourceTree = "<group>"; };
+		BAD51C9816998A6C0009667B /* ID3Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3Parser.h; sourceTree = "<group>"; };
+		BAD51C9916998A6C0009667B /* ID3Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ID3Parser.m; sourceTree = "<group>"; };
+		BAD51C9E16998AA90009667B /* 10952.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10952.mp3; sourceTree = "<group>"; };
+		BAD51C9F16998AA90009667B /* Paradise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Paradise.mp3; sourceTree = "<group>"; };
+		BAD51CA216998AE70009667B /* HLID3Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLID3Util.h; sourceTree = "<group>"; };
+		BAD51CA316998AE70009667B /* HLID3Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLID3Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +168,8 @@
 		5CC5DA031697484500B0EA6B /* DoubanMusicGetter */ = {
 			isa = PBXGroup;
 			children = (
+				BAD51CA216998AE70009667B /* HLID3Util.h */,
+				BAD51CA316998AE70009667B /* HLID3Util.m */,
 				5CC5DA0C1697484600B0EA6B /* HLAppDelegate.h */,
 				5CC5DA0D1697484600B0EA6B /* HLAppDelegate.m */,
 				5CC5DA57169749CB00B0EA6B /* HLDownloadViewController.h */,
@@ -179,6 +198,8 @@
 		5CC5DA1A1697484C00B0EA6B /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BAD51C9D16998A930009667B /* Music */,
+				BAD51C9116998A5C0009667B /* ID3Tag */,
 				5CC5DA381697488000B0EA6B /* JSON */,
 				5CC5DA1B1697485600B0EA6B /* ASIHttprequest */,
 			);
@@ -232,6 +253,29 @@
 				5CC5DA451697488D00B0EA6B /* SBJsonWriter.m */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		BAD51C9116998A5C0009667B /* ID3Tag */ = {
+			isa = PBXGroup;
+			children = (
+				BAD51C9316998A6C0009667B /* frameIDALL.h */,
+				BAD51C9416998A6C0009667B /* ID3Frame.h */,
+				BAD51C9516998A6C0009667B /* ID3Frame.m */,
+				BAD51C9616998A6C0009667B /* ID3FrameText.h */,
+				BAD51C9716998A6C0009667B /* ID3FrameText.m */,
+				BAD51C9816998A6C0009667B /* ID3Parser.h */,
+				BAD51C9916998A6C0009667B /* ID3Parser.m */,
+			);
+			name = ID3Tag;
+			sourceTree = "<group>";
+		};
+		BAD51C9D16998A930009667B /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				BAD51C9E16998AA90009667B /* 10952.mp3 */,
+				BAD51C9F16998AA90009667B /* Paradise.mp3 */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +334,8 @@
 				5CC5DA101697484600B0EA6B /* Default.png in Resources */,
 				5CC5DA121697484600B0EA6B /* Default@2x.png in Resources */,
 				5CC5DA141697484600B0EA6B /* Default-568h@2x.png in Resources */,
+				BAD51CA016998AA90009667B /* 10952.mp3 in Resources */,
+				BAD51CA116998AA90009667B /* Paradise.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +365,10 @@
 				5CC5DA541697497100B0EA6B /* Reachability.m in Sources */,
 				5CC5DA59169749CB00B0EA6B /* HLDownloadViewController.m in Sources */,
 				5CC5DA5C16974BA100B0EA6B /* HLMusicDownloader.m in Sources */,
+				BAD51C9A16998A6C0009667B /* ID3Frame.m in Sources */,
+				BAD51C9B16998A6C0009667B /* ID3FrameText.m in Sources */,
+				BAD51C9C16998A6C0009667B /* ID3Parser.m in Sources */,
+				BAD51CA416998AE70009667B /* HLID3Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +475,7 @@
 				5CC5DA191697484600B0EA6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
